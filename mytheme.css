@@ -1,0 +1,91 @@
+/**
+
+@name Arabic Font
+@description Apply Arabic font to Discord in RTL mode
+@version 1.0.0
+@author Hussein 2.1v#1856
+@source https://example.com/arabic-font.css
+*/
+/* Font Import */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/cairo.css');
+
+/* Default font variables */
+:root {
+--font-default: 'Open Sans', sans-serif;
+--font-emoji: 'Segoe UI Emoji', 'Apple Color Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Color', sans-serif;
+}
+
+/* Arabic font variables */
+:root[lang="ar"],
+body[dir="rtl"] {
+--font-default: 'Cairo', sans-serif;
+--font-emoji: 'Segoe UI Emoji', 'Apple Color Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Color', sans-serif;
+}
+
+/* Font application */
+body,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input,
+textarea,
+select,
+div,
+pre,
+code,
+blockquote,
+td,
+th,
+label,
+.captionDefault-3otRk9,
+.caption-3qfYcj,
+.nameTag-3O6REG,
+.title-31JmR4,
+.titleDefault-a8-ZSr,
+.titleWrapper-23fueE {
+font-family: var(--font-default) !important;
+}
+
+/* Emoji font application */
+.emoji {
+font-family: var(--font-emoji) !important;
+}
+
+/* Arabic text correction /
+:root[lang="ar"],
+body[dir="rtl"] {
+/ flip horizontal layout */
+transform: scaleX(-1);
+
+/* set direction */
+direction: rtl;
+}
+
+/* RTL scrollbar correction */
+:root[lang="ar"] ::-webkit-scrollbar {
+-webkit-appearance: none;
+width: 8px;
+}
+
+:root[lang="ar"] ::-webkit-scrollbar-thumb {
+border-radius: 4px;
+background-color: rgba(0,0,0,.5);
+-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+:root[lang="ar"] ::-webkit-scrollbar-thumb:hover {
+background-color: rgba(0,0,0,.6);
+-webkit-box-shadow: 0 0 1px rgba(255,255,255,.8);
+}
+
+:root[lang="ar"] ::-webkit-scrollbar-thumb:active {
+background-color: rgba(0,0,0,.75);
+-webkit-box-shadow: 0 0 1px rgba(255,255,255,1);
+}
