@@ -1,29 +1,19 @@
-/**
+/* تحميل خطوط Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap');
 
-@name Arabic Font
-@description Apply Arabic font to Discord in RTL mode
-@version 1.0.0
-@author Hussein 2.1v#1856
-@source https://example.com/arabic-font.css
-*/
-/* Font Import */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/earlyaccess/cairo.css');
-
-/* Default font variables */
+/* خط افتراضي */
 :root {
---font-default: 'Open Sans', sans-serif;
---font-emoji: 'Segoe UI Emoji', 'Apple Color Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Color', sans-serif;
+  --font-default: 'Noto Sans', sans-serif;
 }
 
-/* Arabic font variables */
+/* خط للنصوص العربية */
 :root[lang="ar"],
 body[dir="rtl"] {
---font-default: 'Cairo', sans-serif;
---font-emoji: 'Segoe UI Emoji', 'Apple Color Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Color', sans-serif;
+  --font-default: 'Cairo', sans-serif;
 }
 
-/* Font application */
+/* تطبيق الخط على النصوص */
 body,
 span,
 h1,
@@ -50,42 +40,39 @@ label,
 .title-31JmR4,
 .titleDefault-a8-ZSr,
 .titleWrapper-23fueE {
-font-family: var(--font-default) !important;
+  font-family: var(--font-default) !important;
 }
 
-/* Emoji font application */
+/* تطبيق الخط على الإيموجي */
 .emoji {
-font-family: var(--font-emoji) !important;
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Color', sans-serif !important;
 }
 
-/* Arabic text correction /
+/* تعديل النصوص العربية */
 :root[lang="ar"],
 body[dir="rtl"] {
-/ flip horizontal layout */
-transform: scaleX(-1);
-
-/* set direction */
-direction: rtl;
+  transform: scaleX(-1);
+  direction: rtl;
 }
 
-/* RTL scrollbar correction */
+/* تعديل الشريط الجانبي للنصوص العربية */
 :root[lang="ar"] ::-webkit-scrollbar {
--webkit-appearance: none;
-width: 8px;
+  -webkit-appearance: none;
+  width: 8px;
 }
 
 :root[lang="ar"] ::-webkit-scrollbar-thumb {
-border-radius: 4px;
-background-color: rgba(0,0,0,.5);
--webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
 :root[lang="ar"] ::-webkit-scrollbar-thumb:hover {
-background-color: rgba(0,0,0,.6);
--webkit-box-shadow: 0 0 1px rgba(255,255,255,.8);
+  background-color: rgba(0,0,0,.6);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.8);
 }
 
 :root[lang="ar"] ::-webkit-scrollbar-thumb:active {
-background-color: rgba(0,0,0,.75);
--webkit-box-shadow: 0 0 1px rgba(255,255,255,1);
+  background-color: rgba(0,0,0,.75);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,1);
 }
